@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perspective</title>
+        <style type="text/css">
+           *{
+            perspective: 600px;
+           }
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container{
+                width: 500px;
+                background: #f4f4f4;
+            }
+
+            .div1{
+                width: 250px;
+                height: 100px;
+                background: linear-gradient(
+                    black,
+                    white
+                );
+                margin: auto;
+                padding: 10px;
+                border: 1px solid black;  
+                box-shadow: -5px 0 10px rgba(0,0,0,0.8);              
+
+                position: relative;
+                
+            }
+
+            .div2{
+                width: 200px;
+                height: 100px;
+                background: linear-gradient(
+                    black,
+                    white
+                );
+                padding: 50px;
+                border: 1px solid black;
+                box-shadow: -5px 0 10px rgba(0,0,0,0.8);  
+
+                position: absolute;
+                left: -7%;
+                top: -130%;
+
+                transform: rotateX(45deg);
+
+                z-index: 1;
+            }
+
+            .div3{
+                width: 50px;
+                height: 100px;
+                background: conic-gradient(
+                    silver 50%,
+                    grey 10%
+                );
+                border-left: 1px dotted black;
+                border-right: 1px dotted black;
+
+                position: absolute;
+                left: 60%;
+                top: 15%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="div1">
+                DIV1
+                <div class="div2">DIV2</div>
+                <div class="div3">DIV3</div>
+            </div>
+        </div>
+    </body>
+</html>

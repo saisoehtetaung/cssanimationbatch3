@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Translate in 3D</title>
+        <style type="text/css">
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container{
+                perspective: 500px;
+                /* perspective-origin: center;    */
+                /* perspective-origin: top; */
+                /* perspective-origin: bottom; */
+                /* perspective-origin: left; */
+                /* perspective-origin: right; */
+
+                /* perspective-origin: left top; */
+                /* perspective-origin: right bottom; */
+
+                /* perspective-origin: 50% 100%; */
+                /* perspective-origin: 30% bottom; */
+                
+            }
+
+            img{
+                width: 300px;
+                transition: transform 2s;
+            }
+
+            img:hover{
+                /* transform: translateZ(-500px); */
+                transform: translateZ(300px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="./image/dog.jpg" alt="dog" />
+        </div>
+    </body>
+</html>

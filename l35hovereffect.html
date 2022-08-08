@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hover Effect</title>
+        <style type="text/css">
+            body{
+                background-color: #272727;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                --wth: 300px;
+                --hth: 50px;
+                width: var(--wth);
+                height: var(--hth);
+                text-decoration: none;
+                border: 1px solid #fff;
+
+                position: relative;
+
+                overflow: hidden;
+            }
+
+            .btn span{
+                width: inherit;
+                height:inherit;
+                font-size: 14px;
+                font-weight: 800;
+                color: #fff;
+                text-align: center;
+                line-height: 50px;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                
+                position:absolute;
+                z-index: 1;
+            }
+
+            .btn em{
+                width: 10%;
+                height: 100%;
+                background-color: #fff;
+
+                position: absolute;
+                top: 0;
+                left: calc(100% / 10 * var(--i));
+
+                transform: translate(-100%) scaleX(0) ;
+                transform-origin: right;
+                transition: transform 1s;
+                transition-delay: calc(.2s / 10 * var(--i));
+            }
+
+            .btn:hover span{
+                color: #333;
+            }
+            .btn:hover em{
+                transform: translate(-100%) scaleX(1);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#" class="btn">
+            <em style="--i:1"></em>
+            <em style="--i:2"></em>
+            <em style="--i:3"></em>
+            <em style="--i:4"></em>
+            <em style="--i:5"></em>
+            <em style="--i:6"></em>
+            <em style="--i:7"></em>
+            <em style="--i:8"></em>
+            <em style="--i:9"></em>
+            <em style="--i:10"></em>
+            <span>Hover Me</span>
+        </a>
+    </body>
+</html>

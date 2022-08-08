@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clip Path</title>
+        <style type="text/css">
+            .shape{
+                width: 500px;
+                height: 300px;
+
+                background: red;
+            }
+
+            #circle{
+                /* clip-path: circle(100px); */
+
+                /* circle(shape-radius at position of axis) */
+                /* clip-path: circle(200px at center); */
+                /* clip-path: circle(200px at left); */
+                /* clip-path: circle(200px at right); */
+                /* clip-path: circle(200px at top); */
+                /* clip-path: circle(200px at bottom); */
+
+                            /* circle(shape-radius at 0px) */
+                /* clip-path: circle(100px at 100px); */
+
+                            /* circle(shape-radius at width height) */
+                /* clip-path: circle(200px at 50px 20px); */
+
+                /* clip-path: circle(50%); */
+                clip-path: circle(50% at 50% 20%);
+
+            }
+
+            #polygon{
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            }
+
+            #ellipse{
+                /* clip-path: ellipse(150px 100px); */
+                
+                    /* ellipse(width height at position); */
+                /* clip-path: ellipse(150px 150px at bottom); */
+                clip-path: ellipse(30% 20% at 20px 30px);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./image/dog.jpg" id="circle" class="shape" alt="dog" />
+        <hr/>
+
+        <img src="./image/dog.jpg" id="polygon" class="shape" alt="polygondog" />
+        <hr/>
+
+        <img src="./image/dog.jpg" id="ellipse" class="shape" alt="ellipsedog" />
+    </body>
+</html>
